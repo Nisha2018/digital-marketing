@@ -1,0 +1,582 @@
+.grid-m{
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.digital-marketing, .quality,.online-marketing,.choose-us, .technical-partner, .people,
+ .register,.plan, .digital-marketing .form-area,.digital-marketing .content .text, .head,
+.choose-us .content .features, .choose-us .content .features .text, 
+.services .service, .services .service .text,.people .content .person .text,
+.register .buttons,.plan .content .card .card-head,.plan .content .card .price, 
+.contact .info,.contact .info .text,.footer .text{
+	grid-template-rows: auto auto;
+    grid-row-gap: 1rem;
+}
+
+.why, .contact, .footer, .digital-marketing .content,.technical-partner .content,
+.people .content .person{
+	grid-template-rows: auto auto auto;
+	grid-row-gap: 2rem;
+}
+
+.services, .online-marketing .text,.choose-us .content, .plan .content{
+	grid-template-rows: auto auto auto auto;
+    grid-row-gap: 2rem;
+}
+
+.digital-marketing .form-area form{
+	grid-template-rows: repeat(5,auto);
+	grid-row-gap: 1.5rem;
+}
+
+.quality .image, .online-marketing .image{
+	grid-template-rows: auto;
+}
+
+.people .content{
+	grid-template-rows: repeat(6,auto);
+	grid-row-gap: 3rem;
+}
+
+.plan .content .card{
+	grid-template-rows: repeat(7,auto);
+}
+
+.digital-marketing .content .text .number{
+	display: none;
+}
+
+
+/*Tab View*/
+@media screen and (min-width: 600px){
+
+.grid-t{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+}
+
+.digital-marketing .content .text,
+.choose-us .content,
+.people .content .person, .plan .content{
+	grid-template-rows: auto auto;
+	grid-column-gap: 2rem;
+}
+
+.digital-marketing .content .text .number{
+	grid-column: 1;
+	grid-row: 1/span 2;
+}
+
+.digital-marketing .content .text .number{
+	display: grid;
+}
+
+.people .content{
+	grid-template-rows: auto auto auto;
+}
+
+.people .content .person .comment{
+	grid-row: 2;
+	grid-column: 1/span 2;
+}
+
+.contact{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+/*styling*/
+.digital-marketing .content,.online-marketing .text,.people .content .person{
+	text-align: left;
+	align-items: center;
+}
+
+.digital-marketing .content .font-24, .quality .font-24,.online-marketing .heading.font-20,
+.choose-us .font-24, .why .font-20, .people .font-20, .plan .font-20{
+	font-size: 30px;
+	align-self: end;
+}
+
+.digital-marketing, .technical-partner{
+	grid-column-gap: 3rem;
+}
+
+.digital-marketing .content .text.second{
+	align-self: start;
+}
+
+.quality .font-14{
+	font-size: 16px;
+}
+
+.technical-partner .font-20,.register .text span{
+	font-size: 25px;
+}
+
+.technical-partner .video,.footer .text .color-grey{
+	align-self: center;
+}
+
+.services{
+	grid-column-gap: 2rem;
+}
+
+.people .content .person{
+	grid-template-columns: auto 1fr;
+}
+
+.people .content .person .image .img-container img{
+	width: 70px;
+	height: auto;
+}
+
+.register .buttons, .footer .text{
+	justify-content: center;
+    grid-column-gap: 2rem;
+}
+
+.register{
+	grid-row-gap: 3rem;
+}
+
+.footer .text{
+	grid-template-rows: auto;
+}
+
+.footer .text .button{
+	align-self: center;
+}
+
+}
+
+
+/*styling*/
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.p-all{
+	padding: 8rem 2rem;
+}
+
+.img{
+	width: 100%;
+	height: auto;
+}
+
+.bg-img{
+	background-image: url("Images/bg1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-green{
+	background-color: #6aa84f;
+}
+
+.bg-blue{
+	background-color: #1f337a;
+}
+
+.bg-gray{
+	background-color: #f6f6f6;
+}
+
+.color-grey{
+	color: #282828;
+}
+
+.color-light{
+	color: grey;
+}
+
+.color-white{
+	color: #fff;
+}
+
+.font-30{
+	font-size: 30px;
+}
+
+.font-26{
+	font-size: 26px;
+}
+
+.font-24{
+	font-size: 24px;
+}
+
+.font-20{
+	font-size: 20px;
+}
+
+.font-18{
+	font-size: 18px;
+}
+
+.font-17{
+	font-size: 17px;
+}
+
+.font-15{
+	font-size: 15px;
+}
+
+.font-14{
+	font-size: 14px;
+}
+
+.font-bold{
+	font-weight: bold;
+}
+
+.btn{
+	cursor: pointer;
+    padding: 1.5rem 2rem;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.digital-marketing .form-area{
+	width: 100%;
+    background: #fff;
+    justify-self: center;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.digital-marketing .form-area .form-text{
+	color: black;
+	padding: 2rem 0;
+}
+
+.digital-marketing .form-area form .form-control{
+	width: 100%;
+    border-radius: 3px;
+    border: 1px solid #c4bfbf;
+    outline: none;
+    padding: 1.2rem;
+}
+
+.digital-marketing .form-area form .btn.btn1{
+	width: 100%;
+	font-size: 14px;
+}
+
+.digital-marketing .content .text.first{
+	border-bottom: 1px solid #323280;
+    padding-bottom: 15px;
+}
+
+.digital-marketing .content .text .number{
+	height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 46px;
+    font-size: 20px;
+    background: #05123a;
+}
+
+.quality{
+	padding-bottom: 0;
+    grid-row-gap: 3rem;
+}
+
+.online-marketing{
+	background: #2c353f;
+}
+
+.online-marketing .text .button .btn.btn2, .why .button .btn.btn3,
+.register .buttons .btn.btn4{
+    background: #fff;
+    border-radius: 50px;
+    color: #2c353f;
+}
+
+.choose-us .content .features{
+	background: #fff;
+    box-shadow: 1px 1px 10px #d2cdcd;
+    padding: 30px;
+    grid-row-gap: 3rem;
+}
+
+.choose-us .content .features .icon i{
+	font-size: 50px;
+    color: #6aa84f;
+}
+
+.choose-us, .people, .plan,.plan .content,.contact,.services .service{
+	grid-row-gap: 3rem;
+}
+
+.choose-us .content .features .text .desc{
+	font-size: 14px;
+}
+
+.technical-partner .content{
+	text-align: left;
+}
+
+.why{
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Images/bg.jpg"); 
+	background-size: cover;
+	background-position: center;
+}
+
+.services .service .icon i{
+	border-radius: 50%;
+    font-size: 35px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+    background: #6aa84f;
+    color: #fff;
+}
+
+.people .content .person .image img{
+    border-radius: 100%;
+    width: 120px;
+    height: auto;
+    margin: auto;
+}
+
+.register .buttons .btn.btn4{
+	color: #1f337a; 
+	font-size: 15px;
+	padding: 15px 60px;
+}
+
+.register .buttons .btn.btn5{
+	border: 2px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 15px 40px;
+}
+
+.plan .content .card{
+	border: 1px solid #bcb6b6;
+}
+
+.plan .content .card .card-head{
+	background: #2c353f;
+	color: #fff;
+	padding: 20px; 
+}
+
+.plan .content .card .price span{
+	color: #2c353f;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.plan .content .card .price{
+	border-bottom: 1px solid grey;
+	padding: 25px; 
+}
+
+.plan .content .card .card-text{
+	border-bottom: 1px solid grey;
+	padding: 10px;
+	font-size: 14px;
+	color: #514e4e;
+}
+
+.plan .content .card .button{
+	padding: 40px;
+}
+
+.plan .content .card .button .btn.btn6{
+    border: 2px solid black;
+    background: transparent;
+    font-size: 12px;
+    color: black;
+    padding: 8px;
+}
+
+.plan .content .card .button .btn.btn7{
+	background: #6aa84f;
+	color: #fff;
+}
+
+.plan .content .card .top span{
+	background: #e7403a;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: -15px;
+    left: 37%;
+}
+
+.plan .content .card .card-head{
+	position: relative;
+}
+
+.plan .content .card .third{
+	background-color: #6aa84f;
+}
+
+.contact{
+	background-image: url(Images/contact-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.contact .text{
+	font-size: 14px;
+}
+
+.contact .info .icon i{
+	font-size: 28px;
+    color: #6aa84f;
+}
+
+.footer .text .button .btn8{
+    border-radius: 60px;
+    padding: 10px 25px;
+}
+
+.footer .copyright{
+	font-size: 10px;
+    border-top: 1px solid #cac2c2;
+    padding: 15px 0 35px;
+}
+
+.footer .logo{
+	padding-top: 35px;
+}
+
+/*Desktop view*/
+@media screen and (min-width: 992px){
+.grid-d{
+	display: grid;
+	grid-template-rows: auto;
+}
+
+.choose-us .content,
+.services,
+.plan .content{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+.people .content{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+
+.register{
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: auto;
+}
+
+.footer{
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+}
+
+.footer .copyright{
+	grid-row: 2;
+	grid-column: 1/span 2;
+}
+
+.digital-marketing .content .heading{
+	font-size: 60px;
+}
+
+.quality .heading,.online-marketing .text .heading, .choose-us .head .heading,
+.technical-partner .content .heading,.why .heading,.people .heading{
+	font-size: 45px;
+}
+
+.online-marketing .text{
+	padding: 0 30px;
+}
+
+.head{
+	padding: 0 35rem;
+}
+
+.digital-marketing{
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 6rem;
+}
+
+.digital-marketing.p-all{
+	padding: 10rem;
+}
+
+.quality .image .img-container, .choose-us .content, .plan .content{
+	padding: 0 12rem;
+}
+
+.why,.contact{
+	padding: 8rem 14rem;
+}
+
+.choose-us{
+	grid-row-gap: 6rem;
+}
+
+.online-marketing.p-all,.services,.people .content{
+    padding: 8rem 10rem;
+}
+
+.people .content{
+	grid-gap: 4rem;
+}
+
+.why .description{
+	font-size: 20px;
+}
+
+.online-marketing{
+	grid-column-gap: 4rem;
+}
+
+.technical-partner{
+	grid-template-columns: 1fr 1fr;
+}
+
+.technical-partner .video,.technical-partner .content{
+    padding: 0 50px;
+}
+
+.technical-partner .video iframe{
+    height: 300px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
